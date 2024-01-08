@@ -14,21 +14,26 @@
     "@supabase/supabase-js": "^2.39.1",
     "formidable": "^3.5.1",
     "googleapis": "^128.0.0",
+    "jquery": "^3.7.1",
     "next": "^14.0.4",
     "nodemailer": "^6.9.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-slick": "^0.29.0",
     "recharts": "^2.10.3",
+    "slick-carousel": "^1.8.1",
     "swr": "^2.2.4"
   },
   "devDependencies": {
     "@types/formidable": "^3.4.4",
+    "@types/jquery": "^3.5.29",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.11",
-    "@types/react": "^18.2.45",
+    "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
+    "@types/slick-carousel": "^1.6.40",
     "eslint": "^8",
     "eslint-config-next": "^14.0.4",
-    "typescript": "^5"
+    "typescript": "^5.3.3"
   }
 }

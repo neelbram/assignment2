@@ -1,54 +1,93 @@
+"use client"
 import WebsiteScreen from '@/lib/components/website-screen';
 import { COURSE_WELCOME_TEXT } from '@/lib/config';
 import Image from 'next/image';
 import Link from 'next/link';
+import menta from "../images/menta.png"
+import menta2 from "../images/menta2.jpeg"
+import menta3 from "../images/menta3.png"
+import { title } from 'process';
+import React, { useState } from 'react';
+ 
 
-export default function Home() {
-  return (
-    <WebsiteScreen>
-      <div className="grid">
-        <div className="center padding-2 text-xl">
-          <span>
-            {COURSE_WELCOME_TEXT}
-          </span>
+
+const Home = () => {
+  const [showIframe, setShowIframe] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowIframe(!showIframe);
+  };  return (
+    
+    <div>
+      <h1 className='title'>This Is A Website About Menta The Labrador</h1>
+  
+      <div className='button-container'>
+        <button onClick={handleButtonClick} className='toggle-button'>
+          {showIframe ? 'Close Video' : 'Do Not Push!'}
+        </button>
+
+        <div style={{ display:'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: '70px' }}>
+          <Image src={menta2} width="240" height="320" alt="Menta the Labrador" style={{ transform: 'None' }}/>
+          <Image src={menta} width="320" height="240" alt="Menta the Labrador" style={{ transform: 'rotate(90deg)' }}/>
+          <Image src={menta3} width="240" height="320" alt="Menta the Labrador" style={{ transform: 'None' }}/>
         </div>
-        <div className="center padding-2">
-          <Image
-            src="/huji.png"
-            alt="HUJI Logo"
-            width={320}
-            height={100}
-            priority
-          />
-        </div>
-        <div className="center padding-2">
-          <Image
-            src="/bezalel.png"
-            alt="Bezalel Logo"
-            className="item"
-            width={320}
-            height={100}
-            priority
-          />
-        </div>
-        <div>
-          <h1 className="center text-xxxl">
-            Lorem Ipsum
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus sit amet nunc nec vehicula. Fusce ornare nec nulla non imperdiet. Fusce vel sodales justo. Sed efficitur arcu lorem, at iaculis odio ultricies et. Duis rutrum urna nec elit bibendum, sed hendrerit nulla posuere. Vestibulum vestibulum, ante non tincidunt posuere, dui arcu lacinia nisl, nec rhoncus massa arcu ac ipsum. Nam congue interdum tortor, eu dignissim massa scelerisque vitae. Sed ultricies bibendum congue. Praesent non magna id ligula maximus luctus. Donec vitae nibh quis neque luctus sagittis et eget nunc. Aliquam id ullamcorper lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur tempor quis dolor a lacinia.
-          </p>
-          <ul>
-            <li>Aliquam maximus tellus sed lacus venenatis, ac cursus eros mollis.</li>
-            <li>In id ante sed sem pharetra molestie et vitae arcu.</li>
-            <li>Cras pharetra turpis at pretium elementum.</li>
-            <li>Donec ultrices felis vel lectus auctor iaculis.</li>
-          </ul>
-          <p>
-            See our <Link target="_blank" href="https://github.com/digital-product-jam-2024/course/tree/main/reference">Reference Material</Link> on <Link target="_blank" href="https://github.com/digital-product-jam-2024/course/blob/main/reference/html.md">HTML</Link>, <Link target="_blank" href="https://github.com/digital-product-jam-2024/course/blob/main/reference/css.md">CSS</Link>, and <Link target="_blank" href="https://github.com/digital-product-jam-2024/course/blob/main/reference/javascript.md">JavaScript</Link>.
-          </p>
-        </div>
+        <button onClick={handleButtonClick} className='toggle-button'>
+          {showIframe ? 'Close Video' : 'Do Not Push!'}
+        </button>
       </div>
-    </WebsiteScreen>
-  )
-}
+
+        <div className='column'>
+          <h3 className='title'>People Who <em>Love</em> Menta</h3>
+          <ul >
+            <li>Neel</li>
+            <li>Yaron</li>
+            <li>Shir</li>
+            <li>Noam</li>
+            <li>Gila</li>
+            <li>Amichay</li>
+            <li>Dor</li>
+            <li>Ella</li>
+          </ul>
+        </div> 
+
+        <div id="intro to Menta" className='column'>
+          <h2 className='title'>A Little Bit About Menta</h2>
+            <p>Menta was raised a <a href="https://www.israelguidedog.org.il/" target="_blank" > service puppy</a>.<br></br>
+              After a year at her owners she was sent to the service-dog-bootcamp. <br></br>
+              A few months later her owners were announced she was disqualified from the course due to health issues. <br></br>
+              Menta was happy to return to her owners and the lived happliy ever after <br></br>
+            </p>
+        </div>
+
+        <div className='column'>
+          <h3 className='title'>People Who <em>Do Not Love</em> Menta</h3>
+          <ul >
+            <li>Eitan</li>
+            <li>Yafit</li>
+            <li>Avia</li>
+            <li>Noam (the child)</li>
+            <li>Dolly</li>
+          </ul>
+        </div>
+        
+        <div>
+          {showIframe && (
+            <div className='iframe-container'>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/ojULkWEUsPs"
+                title="YouTube Video"
+                frameBorder="0"
+                allowFullScreen
+              ></iframe>
+            </div>
+          )}
+        </div>
+    </div>
+  );
+};
+
+
+export default Home;
+
