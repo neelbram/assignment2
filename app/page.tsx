@@ -28,7 +28,7 @@ const Home = () => {
 
         <div style={{ display:'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: '70px' }}>
           <Image src={menta2} width="240" height="320" alt="Menta the Labrador" style={{ transform: 'None' }}/>
-          <Image src={menta} width="320" height="240" alt="Menta the Labrador" style={{ transform: 'rotate(90deg)' }}/>
+          <Image src={menta} width="320" height="240" alt="Menta the Labrador" style={{ transform: 'None' }}/>
           <Image src={menta3} width="240" height="320" alt="Menta the Labrador" style={{ transform: 'None' }}/>
         </div>
         <button onClick={handleButtonClick} className='toggle-button'>
@@ -54,7 +54,7 @@ const Home = () => {
           <h2 className='title'>A Little Bit About Menta</h2>
             <p>Menta was raised a <a href="https://www.israelguidedog.org.il/" target="_blank" > service puppy</a>.<br></br>
               After a year at her owners she was sent to the service-dog-bootcamp. <br></br>
-              A few months later her owners were announced she was disqualified from the course due to health issues. <br></br>
+              A few months later her owners were told that she was disqualified from the course due to health issues. <br></br>
               Menta was happy to return to her owners and the lived happliy ever after <br></br>
             </p>
         </div>
