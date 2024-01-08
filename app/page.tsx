@@ -28,7 +28,7 @@ const Home = () => {
 
         <div style={{ display:'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: '70px' }}>
           <Image src={menta2} width="240" height="320" alt="Menta the Labrador" style={{ transform: 'None' }}/>
-          <Image src={menta} width="320" height="240" alt="Menta the Labrador" style={{ transform: 'None' }}/>
+          <Image src={menta} width="240" height="320" alt="Menta the Labrador" style={{ transform: 'None' }}/>
           <Image src={menta3} width="240" height="320" alt="Menta the Labrador" style={{ transform: 'None' }}/>
         </div>
         <button onClick={handleButtonClick} className='toggle-button'>
